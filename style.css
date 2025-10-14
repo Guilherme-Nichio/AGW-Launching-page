@@ -1,9 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 body{
-    margin: 5%;
-    background-color: rgb(14, 14, 14);
+    background-color: rgb(7, 7, 7);
     color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+span{
+    color: #FFA500;
+}
+span:hover{
+    color:#FFD700 ; 
+    transition: 5ms;  
+}
+/* topo da pagina */
+.hero img {
+   width: 200px;
+   height: auto;
+}
+.data {
+  display: flex;
+  align-items: center; 
+  border-radius: 10px;
+  width: 60%;
+  text-align: center;
+  justify-content: center;
+  font-size: 18px;
+  gap: 20px;
+  border-color: #d6d5d5;
+  border: solid;
+  padding: 10px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.hero {
-    
+.data p {
+  margin: 0;
+}
+.hero{
+    padding: 5%;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-image: url(Banner1.jpg);
+}
+.hero .formulario{
+    width: 50%;
+}
+.txt_h{
+    color:#d6d5d5 ;
+}
+.txt_h span {
+  transition: color 0.3s;
+  cursor: pointer;
+  color:#d6d5d5;
+  
+}
+
+.txt_h span:hover {
+  color: #FFD700; 
+}
+
+.Texto_hero{
+    font-size: 70px;
+    line-height: 0.9;
+}
+.formulario .signup-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+}
+
+.signup-form input{
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+.signup-form button{
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    color: #000;
+    border: none;
+    font-size: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 60px;
+
+}
+/* Hero 2 */
+
+.hero2 { 
+    display: flex;
+    flex-direction: column; /* deixa os elementos em coluna */
+    align-items: center;    /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
+    height: 100vh;          /* altura total da tela */
+    text-align: center;
+    padding: 0 20px; 
+    margin: 0 25%;       /* espaço nas laterais */
+}
+
+.hero2 h2{
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    margin: 50px;
+}
+
+.hero2 p{
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.hero2 button{
+    background: linear-gradient(90deg, #FFD700, #FFA500);
+    color: #000;
+    border: none;
+    font-size: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 60px;
+    text-align: center;
 }
