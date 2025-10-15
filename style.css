@@ -7,7 +7,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 span{
-    color: #FFA500;
+    color: #FFB400;
 }
 span:hover{
     color:#FFD700 ; 
@@ -58,7 +58,7 @@ span:hover{
 }
 
 .txt_h span:hover {
-  color: #FFD700; 
+  color: #FFB400; 
 }
 
 .Texto_hero{
@@ -78,7 +78,7 @@ span:hover{
     padding-left: 20px;
 }
 .signup-form button{
-    background: linear-gradient(90deg, #FFD700, #FFA500);
+    background: linear-gradient(90deg, #FFB400, #FFA500);
     color: #000;
     border: none;
     font-size: 20px;
@@ -107,7 +107,7 @@ span:hover{
     font-size: 50px;
     line-height: 1.2;
     margin-bottom: 20px;
-    margin: 50px;
+    margin: 30px 50px;
 }
 
 .hero2 p{
@@ -116,7 +116,7 @@ span:hover{
 }
 
 .hero2 button{
-    background: linear-gradient(90deg, #FFD700, #FFA500);
+    background: linear-gradient(90deg, #FFB400, #FFA500);
     color: #000;
     border: none;
     font-size: 20px;
@@ -126,4 +126,281 @@ span:hover{
     cursor: pointer;
     height: 60px;
     text-align: center;
+}
+
+/*Hero 3*/
+.hero3  .discover{
+    color: #000;
+    padding: 50px 25%;
+    background-color: #f1f1f1;
+    height: 60vh; 
+    
+}
+.hero3 h2{
+    font-size: 45px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    margin: 50px;
+    text-align: center;
+}
+.hero3 span{
+    font-size: 60px;
+    font-style: oblique;
+}
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 10%;
+}
+
+.check-list li {
+  margin: 10px 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.check-list i {
+  background-color: #FFB400; /* amarelo */
+  color: #fff; /* check branco */
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 18px;
+  margin-right: 10px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.encontro {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+/*solucao*/
+
+.solution{
+    display: flex;
+    flex-direction: column; /* deixa os elementos em coluna */
+    align-items: center;    /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
+    height: 50vh;          /* altura total da tela */
+    text-align: center;
+    padding: 0 20px; 
+    margin: 0 20%;       /* espaço nas laterais */
+}
+
+.solution h2{
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    margin: 50px;
+}
+
+.solution p{
+    font-size: 22px;
+    margin-bottom: 30px;
+    padding: 0 10%;
+}
+
+/*carrosel de cards*/
+.carrossel {
+  text-align: center;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+
+.carrossel-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* esconde barra Firefox */
+}
+.carrossel-container::-webkit-scrollbar {
+  display: none; /* esconde barra Chrome/Safari */
+}
+
+.card {
+  flex: 0 0 260px;
+  background: #0e0e0e;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column; /* organiza conteúdo em coluna */
+  min-height: 200px; /* ajusta conforme necessidade */
+  justify-content: space-between; /* empurra o preço para baixo */
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #FFB400;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.card p {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.preco-riscado {
+  text-decoration: line-through;
+  color: #999; /* cinza suave */
+  font-size: 24px;
+  font-weight:bolder;
+}
+
+/*chamada para evento*/
+.promotion{
+    background-color: #f1f1f1;
+    color: #0e0e0e;
+    margin: 0 35%;
+    padding: 50px 3%;
+    border-radius: 10px;
+    text-align: center;
+}
+.promotion .box h2{
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: center;
+    margin: 15px;
+}
+.promotion .box p{
+    font-size: 24px;
+    margin: 0;
+    margin: 15px;
+}
+
+.promotion .box h1{
+    text-decoration: line-through;
+    font-size: 50px;
+    color: #860505;
+    font-weight: bolder;
+    margin: 15px;
+
+}
+.promotion .box .quest {
+    color: #FFB400;
+    text-decoration: none;
+    
+
+}
+
+.promotion .box  button{
+    background: linear-gradient(90deg, #FFB400, #FFA500);
+    color: #000;
+    border: none;
+    font-size: 20px;
+    padding: 12px 90px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    height: 60px;
+
+}
+/*hero 4*/
+
+.hero4 { 
+    background-color: #fff;
+    color: #0e0e0e;
+    display: flex;
+    flex-direction: column; /* deixa os elementos em coluna */
+    align-items: center;    /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
+       /* altura total da tela */
+    text-align: center;
+    padding: 0 25%; 
+          /* espaço nas laterais */
+    margin-top: 5%;
+}
+
+.hero4 h2{
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    margin:0 50px;
+    margin-top: 100px;
+}
+
+.hero4 p{
+    font-size: 22px;
+    margin-bottom: 30px;
+    margin: 30px 8%;
+}
+
+.hero4 iframe {
+    border: 5px solid #FFB400; /* borda amarela mais grossa */
+    border-radius: 20px;      /* cantos arredondados */
+    display: block;           /* remove espaços indesejados */
+    max-width: 100%;          /* vídeo responsivo */
+}
+
+.finalizacao{
+    margin: 0;
+    padding: 0;
+    height: 100vh;  
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-image: url(Banner\ 2.png);
+    display: flex;
+}
+.finalizacao .text{
+    width: 50%;
+    padding: 5%;
+}
+.finalizacao h2{
+    font-size: 50px;
+    font-weight: bolder;
+    line-height: 1.2;
+}
+.finalizacao p {
+    font-size: 18px;
+    width: 70%;
+}
+
+/*footer*/
+footer {
+background-color: #000000; /* fundo escuro */
+color: #fff;            /* texto branco */
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding:20px 100px;
+flex-wrap: wrap;        /* responsivo */
+
+}
+
+footer p {
+margin: 0;
+font-size: 16px;
+font-family: 'Arial', sans-serif;
+}
+
+footer span {
+color: #FFD700;          /* destaque dourado no nome */
+font-weight: bold;
+}
+
+footer img {
+height: 50px;
+transition: transform 0.3s ease;
+cursor: pointer;
+}
+
+footer img:hover {
+transform: scale(1.1);  /* efeito hover no logo */
 }
