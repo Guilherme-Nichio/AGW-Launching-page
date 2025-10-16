@@ -1,73 +1,64 @@
-// ==== Rolagem automática e infinita =====
-const carrossel = document.getElementById('carrossel');
+// Este evento garante que o HTML está 100% carregado antes de rodar qualquer script.
+document.addEventListener('DOMContentLoaded', function() {
 
-// Duplicar cards para simular loop infinito
-carrossel.innerHTML += carrossel.innerHTML;
+    // =======================================================
+    // INICIALIZAÇÃO DAS BIBLIOTECAS DE ANIMAÇÃO E ROLAGEM
+    // =======================================================
 
-// Velocidade da rolagem automática
-let scrollSpeed = 1; 
+    try {
+        // Inicializa a rolagem suave (Lenis)
+        const lenis = new Lenis();
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
 
-function autoScroll() {
-  carrossel.scrollLeft += scrollSpeed;
-  if (carrossel.scrollLeft >= carrossel.scrollWidth / 2) {
-    carrossel.scrollLeft = 0;
-  }
-  requestAnimationFrame(autoScroll);
-}
-autoScroll();
+        // Inicializa as animações de aparição (AOS)
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-in-out',
+            offset: 50,
+        });
 
-// Pausa quando o usuário toca ou passa o dedo
-let isDown = false;
-let startX;
-let scrollLeft;
+    } catch (e) {
+        console.error("Erro ao inicializar bibliotecas de animação:", e);
+    }
 
-carrossel.addEventListener('mousedown', (e) => {
-  isDown = true;
-  startX = e.pageX - carrossel.offsetLeft;
-  scrollLeft = carrossel.scrollLeft;
-});
-carrossel.addEventListener('mouseleave', () => { isDown = false; });
-carrossel.addEventListener('mouseup', () => { isDown = false; });
-carrossel.addEventListener('mousemove', (e) => {
-  if(!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - carrossel.offsetLeft;
-  const walk = (x - startX) * 2; 
-  carrossel.scrollLeft = scrollLeft - walk;
-});
 
-// Suporte ao toque (mobile)
-let touchStartX = 0;
-carrossel.addEventListener('touchstart', (e) => {
-  touchStartX = e.touches[0].clientX;
-});
-carrossel.addEventListener('touchmove', (e) => {
-  const touchX = e.touches[0].clientX;
-  const walk = (touchX - touchStartX) * 1.5;
-  carrossel.scrollLeft -= walk;
-  touchStartX = touchX;
-});
+    // =======================================================
+    // O CARROSSEL É CONTROLADO POR CSS, NENHUM JS É NECESSÁRIO.
+    // =======================================================
 
-const form = document.getElementById('leadForm');
-const msg = document.getElementById('msg');
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault(); // evita recarregar a página
+    // =======================================================
+    // ENVIO DO FORMULÁRIO DE LEAD (FETCH API)
+    // =======================================================
+    const form = document.getElementById('leadForm');
+    const msg = document.getElementById('msg');
 
-    const formData = new FormData(form);
+    if(form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
 
-    fetch('enviar.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        msg.textContent = "Lead enviado com sucesso!";
-        msg.style.color = "green";
-        form.reset(); // limpa os campos
-    })
-    .catch(error => {
-        msg.textContent = "Houve um erro. Tente novamente.";
-        msg.style.color = "red";
-    });
+            fetch('enviar.php', { // Verifique se o caminho para enviar.php está correto
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                msg.textContent = "Inscrição confirmada! Nos vemos lá.";
+                msg.style.color = "var(--amarelo)";
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                msg.textContent = "Houve um erro. Tente novamente.";
+                msg.style.color = "red";
+            });
+        });
+    }
+
 });
