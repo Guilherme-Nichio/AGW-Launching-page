@@ -26,15 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error("Erro ao inicializar bibliotecas de animação:", e);
     }
 
-
-    // =======================================================
-    // O CARROSSEL É CONTROLADO POR CSS, NENHUM JS É NECESSÁRIO.
-    // =======================================================
-
-
-    // =======================================================
-    // ENVIO DO FORMULÁRIO DE LEAD (FETCH API)
-    // =======================================================
     const form = document.getElementById('leadForm');
     const msg = document.getElementById('msg');
 
@@ -62,3 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
+document.getElementById("topo").onclick = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
