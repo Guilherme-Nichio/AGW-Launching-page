@@ -333,7 +333,17 @@ footer {
     gap: 20px;
 }
 footer img { height: 50px; }
-
+.facebook{
+    background-color: #000;
+    padding: 0 10%;
+}
+.facebook p{
+    font-size: 10px;
+    
+    text-align: center;
+    
+    padding: 20px;
+}
 
 /* ########################################## */
 /* ############### RESPONSIVO ############### */
@@ -351,7 +361,13 @@ footer img { height: 50px; }
 @media (max-width: 768px) {
     /* Gerais */
     .hero2, .solution, .hero3, .hero4, .promotion, .finalizacao { padding: 80px 5%; }
-    
+    .facebook p{
+        font-size: 10px;
+        color: #999;
+    }
+    .facebook{
+        padding: 0;
+    }
     /* Hero */
     .hero { 
         text-align: center;
@@ -383,8 +399,11 @@ footer img { height: 50px; }
     .hero .formulario { max-width: 100%; }
     .hero img { margin: 0 auto 20px; }
     .Texto_hero { font-size: 36px; }
-    .data { margin: 24px auto; width: 100%; justify-content: center; }
-    
+    .data { margin:10 px ; width: 100%; justify-content: center;font-size: 15px; }
+    .data p{
+        font-size: 12px;
+        font-weight: 600;
+    }
     /* Títulos e Parágrafos */
     .hero2 h2, .solution h2, .hero4 h2, .finalizacao h2, .hero3 h2 { font-size: 32px; }
     .hero2 p, .solution p, .hero4 p { font-size: 16px; }
@@ -394,7 +413,7 @@ footer img { height: 50px; }
     /* Carrossel */
     .carrossel-wrapper::before, .carrossel-wrapper::after { width: 40px; }
     .card { flex: 0 0 250px; min-height: 260px; }
-
+  
     /* Pop-up */
     .popup-container { padding: 30px 25px; }
     .popup-title { font-size: 2em; }
@@ -408,4 +427,7 @@ footer img { height: 50px; }
 
     /* Footer */
     footer { justify-content: center; text-align: center; }
+    footer p{
+        font-size: 10px;
+    }
 }
