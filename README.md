@@ -1,4 +1,4 @@
-# 🌟 O Grande Plano — Página Oficial da BWDesign
+# 🌟 O Grande Plano — página de captura da bwdesign.
 
 **O Grande Plano** é uma página de captura e apresentação de evento ao vivo gratuito da **BWDesign**, voltado a empreendedores e profissionais que desejam transformar seus perfis em marcas fortes, lucrativas e com previsibilidade de crescimento.
 
