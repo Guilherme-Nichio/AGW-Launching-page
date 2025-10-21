@@ -2,7 +2,7 @@
 // Garante que nenhum HTML, espaço ou linha em branco seja enviado antes do PHP
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $destinatario = "guilhermenicchio.co@gmail.com";
+    $destinatario = "bwdesign.contato@gmail.com";
     
     // Você mencionou "O Grande Plano" em conversas anteriores,
     // então estou mantendo o assunto que você definiu.
@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone_lead = strip_tags($_POST["phone"]);
 
     // --- Conteúdo do E-mail ---
-    $mensagem = "Um novo lead se cadastrou na sua página!\n\n";
+    $mensagem = "Um novo lead se cadastrou na sua página da !\n\n";
     $mensagem .= "Nome: " . $name_lead . "\n";
     $mensagem .= "E-mail: " . $email_lead . "\n";
     $mensagem .= "Telefone: " . $phone_lead . "\n";

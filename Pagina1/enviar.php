@@ -2,7 +2,7 @@
 // Garante que nenhum HTML, espaço ou linha em branco seja enviado antes do PHP
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $destinatario = "guilhermenicchio.co@gmail.com";
+    $destinatario = "suporte@agbwdesign.com.br";
     
     // Você mencionou "O Grande Plano" em conversas anteriores,
     // então estou mantendo o assunto que você definiu.
