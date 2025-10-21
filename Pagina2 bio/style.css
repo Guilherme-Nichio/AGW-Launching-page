@@ -9,15 +9,15 @@
     --cinza-claro: #f1f1f1;
     --texto-claro: #d6d5d5;
 }
-.data2{
-    display: none;
-}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+.data2{
+    display: none;
+}
 html {
     /* Lenis (JS) cuidará da rolagem suave */
     overflow-x: hidden; 
@@ -338,17 +338,14 @@ footer {
     gap: 20px;
 }
 footer img { height: 50px; }
-.facebook{
-    background-color: #000;
-    padding: 0 10%;
-}
+
 .facebook p{
     font-size: 10px;
     color: #999;
 }
 .facebook{
     background-color: #000;
-    padding: 10%;
+    padding: 2%;
 }
 
 /* ########################################## */
@@ -404,24 +401,21 @@ footer img { height: 50px; }
     .hero img { margin: 0 auto 20px; }
     .Texto_hero { font-size: 36px; }
     .data {
-        display: none;
-    }
-    .data2 {
         display: flex;
         align-items: center;
         gap: 15px;
         border: 1px solid var(--texto-claro);
         border-radius: 10px;
-        padding: 12px 20px;
+        padding: 20px 5px;
         margin-bottom: 24px;
         justify-content: center;
         background-color: rgba(0,0,0,0.3);
         backdrop-filter: blur(5px);
     }
-    .data2 p { 
-        font-size: 12px;
-        font-weight: 600;
+    .data p { 
+        font-size: 13px;
     }
+
    
 
     /* Títulos e Parágrafos */

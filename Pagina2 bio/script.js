@@ -42,7 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 msg.textContent = "Inscrição confirmada! Nos vemos lá.";
                 msg.style.color = "var(--amarelo)";
+                const redirectURL = 'https://chat.whatsapp.com/DGI7K2R7WeuLlzfC6PtWzi?mode=wwc';
+                window.location.href = redirectURL;
                 form.reset();
+
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -57,3 +60,22 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById("topo").onclick = function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
+
+
+document.getElementById("phone").addEventListener("input", function (e) {
+    let valor = e.target.value.replace(/\D/g, ""); // remove tudo que não é número
+
+    // aplica a máscara automaticamente
+    if (valor.length > 10) {
+        valor = valor.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
+    } else if (valor.length > 6) {
+        valor = valor.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+    } else if (valor.length > 2) {
+        valor = valor.replace(/^(\d{2})(\d{0,5})/, "($1) $2");
+    } else {
+        valor = valor.replace(/^(\d*)/, "($1");
+    }
+
+    e.target.value = valor;
+});
